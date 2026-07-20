@@ -10,7 +10,10 @@
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#D9D8D6;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;color:#101010;-webkit-font-smoothing:antialiased}
+html{background:#C7D5C6}
+body{position:relative;background:linear-gradient(161deg, #D9D7E2 0.6%, #D9D7E2 11.94%, #D8D7E1 21.17%, #D8D7E0 28.61%, #D7D7DF 34.59%, #D6D7DD 39.43%, #D4D6DB 43.46%, #D3D6D9 47%, #D2D6D7 50.38%, #D0D6D4 53.93%, #CED6D2 57.96%, #CDD6CF 62.8%, #CBD5CD 68.78%, #CAD5CA 76.22%, #C8D5C8 85.45%, #C7D5C6 96.79%);font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;color:#101010;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:absolute;top:261px;left:calc(50% - 299px);width:1040px;height:915px;border-radius:50%;background:rgba(246,203,181,.5);filter:blur(268px);pointer-events:none;z-index:0}
+@media(max-width:760px){body::before{top:200px;left:calc(50% - 220px);width:640px;height:560px;filter:blur(160px)}}
 a{color:oklch(55% .13 45);text-decoration:none}
 .wrap{position:relative;z-index:1;padding:20px 16px 56px}
 header{max-width:1200px;margin:0 auto;padding:28px 0 4px}

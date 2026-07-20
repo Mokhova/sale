@@ -36,7 +36,7 @@ h1{font-weight:500;font-size:clamp(34px,4.6vw,58px);line-height:1.05;letter-spac
 /* ═══ CARD — pixel-perfect по макету ═══ */
 .card{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;
   background:#fff;border-radius:30px;padding:8px;display:flex;flex-direction:column;gap:0;
-  height:628px;min-width:0;width:100%;max-width:480px;margin:0 auto;
+  height:600px;min-width:0;width:100%;max-width:480px;margin:0 auto;
   box-shadow:0 2px 10px rgba(130,125,150,.06);animation:cardIn .3s both}
 @keyframes cardIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .chiprow{display:flex;align-items:center;gap:6px;padding:2px 2px 0}
@@ -82,8 +82,8 @@ h1{font-weight:500;font-size:clamp(34px,4.6vw,58px);line-height:1.05;letter-spac
   display:flex;align-items:center;justify-content:center;gap:9px;transition:.2s;flex:none}
 .buy:hover{background:oklch(55% .13 45)}
 .buy i{font-size:18px}
-.mp{display:block;text-align:center;margin-top:10px;font-size:12.5px;color:#8A8A88;text-decoration:underline;text-underline-offset:3px}
-.mp:hover{color:oklch(55% .13 45)}
+.dcol .mp{flex:none;white-space:nowrap;font-size:12.5px;line-height:1.4;color:#8A8A88;text-decoration:underline;text-underline-offset:3px}
+.dcol .mp:hover{color:oklch(55% .13 45)}
 .empty{grid-column:1/-1;margin:32px 4px;color:#5B5B62}
 @media(max-width:760px){
   .wrap{padding:8px 8px 36px}
@@ -171,7 +171,7 @@ function card(p){
     </div>
     <div class="trow"><h3>${p.title}</h3><span class="price">${p.price}</span></div>
     <div class="dwrap">
-      <div class="dcol"><span class="desc">${p.desc}</span><span class="hint"><i class="ph ph-arrow-down"></i></span></div>
+      <div class="dcol"><span class="desc">${p.desc}</span><a class="mp" href="${p.link}" target="_blank" onclick="event.stopPropagation()">Такой&nbsp;же на&nbsp;маркетплейсе ↗</a><span class="hint"><i class="ph ph-arrow-down"></i></span></div>
       <div class="dexp"><p class="desc">${p.desc}</p><div class="up"><i class="ph ph-arrow-up"></i></div></div>
     </div>
     <div class="media">
@@ -181,8 +181,7 @@ function card(p){
         <div class="dots">${p.imgs.map((_,i)=>`<i class="${i===0?'on':''}"></i>`).join('')}</div>`:''}
       </div>
     </div>
-    <button class="buy"><i class="ph-fill ph-paper-plane-tilt"></i>Купить</button>
-    <a class="mp" href="${p.link}" target="_blank">Такой&nbsp;же товар на&nbsp;маркетплейсе ↗</a>`;
+    <button class="buy"><i class="ph-fill ph-paper-plane-tilt"></i>Купить</button>`;
   // галерея
   const gal=el.querySelector('.gal');
   if(multi){

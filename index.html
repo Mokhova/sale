@@ -22,16 +22,16 @@ header{max-width:1200px;margin:0 auto;padding:28px 0 4px}
 h1{font-weight:500;font-size:clamp(34px,4.6vw,58px);line-height:1.05;letter-spacing:-.02em;color:#101010}
 .hrow .tg{margin-top:16px}
 .sub{margin:12px 0 0;font-size:15px;color:#5F5E5C;max-width:560px;line-height:1.45}
-.tg{display:inline-flex;align-items:center;gap:9px;background:transparent;border:1px solid rgba(20,20,25,.5);border-radius:999px;padding:12px 24px;color:rgba(20,20,25,.5);font-size:15px;font-weight:500;transition:.2s;white-space:nowrap;align-self:flex-start}
+.tg{display:inline-flex;align-items:center;gap:9px;background:transparent;border:1px solid rgba(20,20,25,.4);border-radius:999px;padding:12px 24px;color:rgba(20,20,25,.5);font-size:15px;font-weight:500;transition:.2s;white-space:nowrap;align-self:flex-start}
 .tg:hover{color:#101010}
 .tg i{font-size:17px}
-.chips{display:inline-flex;align-items:center;height:44px;border:1px solid #BEBDBB;border-radius:999px;padding:0;margin-top:36px;box-sizing:border-box}
+.chips{display:inline-flex;align-items:center;height:44px;border:1px solid rgba(20,20,25,.4);border-radius:999px;padding:0;margin-top:36px;box-sizing:border-box}
 .chip{border:none;border-radius:999px;height:44px;padding:0 16px;cursor:pointer;background:transparent;color:#6E6D6B;font-family:inherit;font-size:13.5px;font-weight:500;transition:.2s;display:inline-flex;align-items:center;gap:7px}
 .chip.on{background:#101010;color:#fff}
 .chip .c,.cat .c{color:rgba(20,20,25,.3);font-family:"Suisse Intl",-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;font-style:normal;font-weight:400;line-height:14px;letter-spacing:-0.16px;background:none;padding:0;min-width:0}
 .chip.on .c{color:rgba(255,255,255,.6)}
 .cats{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-.cat{display:flex;height:44px;padding:12px 24px;align-items:center;gap:8px;border-radius:999px;border:1px solid rgba(20,20,25,.5);cursor:pointer;background:transparent;color:rgba(20,20,25,.5);font-family:inherit;font-size:14px;line-height:14px;font-weight:400;transition:.2s}
+.cat{display:flex;height:44px;padding:12px 24px;align-items:center;gap:8px;border-radius:999px;border:1px solid rgba(20,20,25,.4);cursor:pointer;background:transparent;color:rgba(20,20,25,.5);font-family:inherit;font-size:14px;line-height:14px;font-weight:400;transition:.2s}
 .cat.on{background:#101010;color:#fff;border-color:#101010}
 .cat.on .c{color:rgba(255,255,255,.6)}
 .grid{max-width:1200px;margin:24px auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
@@ -95,10 +95,11 @@ h1{font-weight:500;font-size:clamp(34px,4.6vw,58px);line-height:1.05;letter-spac
 @media(max-width:760px){
   .wrap{padding:8px 8px 36px}
   header{padding:18px 4px 4px}
-  .hrow{flex-direction:column;gap:12px}
+  .hrow{flex-direction:column;gap:12px;margin-bottom:28px}
   h1{font-size:34px}
   .sub{font-size:13.5px}
   .tg{padding:11px 18px;font-size:14px;margin-top:0}
+  .hrow .tg{margin-top:0}
   .chips{margin-top:20px;max-width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
   .chips::-webkit-scrollbar{display:none}
   .chip{white-space:nowrap;flex:none}
@@ -132,7 +133,7 @@ footer a{font-weight:700}
   <header>
     <div class="hrow">
       <div>
-        <h1>Распродажа по соседству</h1>
+        <h1>Распродажа по&nbsp;соседству</h1>
         <p class="sub">Продаю сама напрямую, свои вещи. Забирать из 4 очереди Сканди, либо занесу в Европу/Сканди/Ботанику по договорённости.</p>
       </div>
       <a class="tg" href="https://t.me/mokhova" target="_blank"><i class="ph-fill ph-paper-plane-tilt"></i>t.me/mokhova</a>

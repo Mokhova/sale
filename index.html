@@ -30,6 +30,7 @@ h1{font-weight:500;font-size:clamp(34px,4.6vw,58px);line-height:1.05;letter-spac
 .chip.on{background:#101010;color:#fff}
 .chip .c,.cat .c{color:rgba(20,20,25,.3);font-family:"Suisse Intl",-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;font-style:normal;font-weight:400;line-height:14px;letter-spacing:-0.16px;background:none;padding:0;min-width:0}
 .chip.on .c{color:rgba(255,255,255,.6)}
+.frow{display:contents}
 .cats{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .cat{display:flex;height:44px;padding:12px 24px;align-items:center;gap:8px;border-radius:999px;border:1px solid rgba(20,20,25,.4);cursor:pointer;background:transparent;color:rgba(20,20,25,.5);font-family:inherit;font-size:14px;line-height:14px;font-weight:400;transition:.2s}
 .cat.on{background:#101010;color:#fff;border-color:#101010}
@@ -95,16 +96,17 @@ h1{font-weight:500;font-size:clamp(34px,4.6vw,58px);line-height:1.05;letter-spac
 @media(max-width:760px){
   .wrap{padding:8px 8px 36px}
   header{padding:18px 4px 4px}
-  .hrow{flex-direction:column;gap:12px;margin-bottom:28px}
-  h1{font-size:34px}
+  .hrow{flex-direction:column;gap:12px;margin-bottom:28px;position:relative}
+  h1{font-size:34px;line-height:32px;padding-right:56px}
+  .trow h3{line-height:24px}
   .sub{font-size:13.5px}
-  .tg{padding:11px 18px;font-size:14px;margin-top:0}
-  .hrow .tg{margin-top:0}
-  .chips{margin-top:20px;max-width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
-  .chips::-webkit-scrollbar{display:none}
+  .hrow .tg{position:absolute;right:0;top:32px;transform:translateY(-50%);margin-top:0;width:44px;height:44px;padding:0;justify-content:center;font-size:0;gap:0}
+  .hrow .tg i{font-size:18px}
+  .frow{display:flex;align-items:center;gap:8px;margin-top:20px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-left:-8px;margin-right:-8px;padding:0 8px}
+  .frow::-webkit-scrollbar{display:none}
+  .chips{margin-top:0;flex:none}
   .chip{white-space:nowrap;flex:none}
-  .cats{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-left:-8px;margin-right:-8px;padding:0 8px}
-  .cats::-webkit-scrollbar{display:none}
+  .cats{margin-top:0;flex-wrap:nowrap;flex:none}
   .cat{white-space:nowrap;flex:none}
   .card{height:auto;padding:8px;border-radius:26px}
   .trow{margin-top:44px}
@@ -138,8 +140,10 @@ footer a{font-weight:700}
       </div>
       <a class="tg" href="https://t.me/mokhova" target="_blank"><i class="ph-fill ph-paper-plane-tilt"></i>t.me/mokhova</a>
     </div>
-    <div class="chips" id="conds"></div>
-    <div class="cats" id="cats"></div>
+    <div class="frow">
+      <div class="chips" id="conds"></div>
+      <div class="cats" id="cats"></div>
+    </div>
   </header>
   <div class="grid" id="grid"></div>
   <footer>
